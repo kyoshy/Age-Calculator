@@ -25,7 +25,7 @@ const updateValue = (id, value) => {
 }
 
 const showResult = () => {
-    header.style.setProperty('margin-top', '50px')
+    header.style.setProperty('margin-top', '0px')
     result.style.setProperty('display', 'block');
 }
 
@@ -48,8 +48,8 @@ const CalculateAge = () => {
     const yearBirth = dateBirth.getFullYear();
 
     const nextBirthday = new Date(dateBirth);
-    nextBirthday.setFullYear(year) > todaysDate.valueAsDate ? nextBirthday.setFullYear(year) : nextBirthday.setFullYear(year+1);
-    
+    nextBirthday.setFullYear(year) > todaysDate.valueAsDate ? nextBirthday.setFullYear(year) : nextBirthday.setFullYear(year + 1);
+
     const isBirthdayThisYear = nextBirthday.getFullYear() === year;
 
     const ageYears = isBirthdayThisYear ? year - yearBirth - 1 : year - yearBirth;
@@ -58,7 +58,7 @@ const CalculateAge = () => {
 
     let ageMonths = isBirthdayThisYear ? month - monthBirth + 12 : month - monthBirth;
     if (dayBirth > day) {
-        ageMonths-=1;
+        ageMonths -= 1;
     }
     updateValue('age-month', ageMonths);
 
