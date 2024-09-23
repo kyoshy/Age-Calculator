@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+    <link rel="icon" type="image/x-icon" href="https://cdn-icons-png.freepik.com/512/4856/4856871.png">
+    <title>Age Calculator</title>
+</head>
+<body>
+    <div class="wrapper">
+    <h1>Age Calculator</h1>
+<div class="info-input">
+    <div class="date-input">
+        <label for="date-of-birth">Date of Birth</label>
+        <input type="date" id="date-of-birth" required>
+    </div>
+
+    <div class="date-input">
+        <label for="todays-date">Today's date</label>
+        <input type="date" id="todays-date" required>
+    </div>
+
+    <button type="submit" id="calculate-button">Calculate</button>
+    </div>
+
+    <div id="result">    
+        <div class="birthday">
+        <div class="age">
+            <h2 class="age-header">Age</h2>
+            <p class="age-yrs med-text"><span id="age-years">0</span>yrs</p>
+            <p class="small-text">
+                <span id="age-month">0</span> 
+                Months | 
+                <span id="age-days">0</span> 
+                days
+            </p>
+        </div>
+
+        <hr>
+
+        <div class="next-birthday">
+        <h3 class="next-birthday-header med-text">Next birthday</h3>
+        <img src="/images/birthday-cake1.jpg" alt="birthday-cake" height="50px">
+        <p class="med-text" id="week-day">Sunday</p>
+        <p class="small-text">
+                <span id="next-month">0</span> 
+                Months | 
+                <span id="next-days">0</span> 
+                days
+            </p>
+        </div>
+        </div>
+        
+        <hr>
+
+        <h3 class="summary-header">Total Summary</h3>
+        <div class="summary">            
+            <div class="summary-item">
+                <p class="small-text">Years</p>
+                <p class="total-numbers" id="total-years">0</p>
+            </div>
+            <div class="summary-item">
+                <p class="small-text">Month</p>
+                <p class="total-numbers" id="total-month">0</p>
+            </div>
+            <div class="summary-item">
+                <p class="small-text">Weeks</p>
+                <p class="total-numbers" id="total-weeks">0</p>
+            </div>
+
+            <div class="summary-item">
+                <p class="small-text">Days</p>
+                <p class="small-text" id="total-days">0</p>
+            </div>
+            <div class="summary-item">
+                <p class="small-text">Hours</p>
+                <p class="small-text" id="total-hours">0</p>
+            </div>
+            <div class="summary-item">
+                <p class="small-text">Minutes</p>
+                <p class="small-text" id="total-minutes">0</p>
+            </div>
+        </div>
+
+    </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>

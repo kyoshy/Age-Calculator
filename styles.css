@@ -1,0 +1,165 @@
+:root{
+    --text-color: #545454;
+    --highlight-color: #9C28B1;
+    --divider-color: #e6e5e5;
+}
+
+body{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: sans-serif;
+    color:var(--text-color);
+}
+
+.wrapper{
+    margin: 0 auto;
+    padding: 36px;
+    max-width:600px;
+}
+
+h1{
+    margin-top: 40%;
+    text-align: center;
+    color: var(--highlight-color);
+    font-weight: 400;
+    font-size: 48px;
+}
+
+hr{
+    border: 1px solid var(--divider-color);
+}
+
+/* Input */
+.info-input{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 20px;
+    font-size: 18px;
+    min-height: 40px;
+}
+
+.date-input{
+    text-align: center;
+
+}
+
+input[type='date']{
+    border: 1px solid var(--text-color);
+    border-radius: 20px;
+    font-size: 14px; 
+    min-height: 20px;   
+}
+
+.input:focus{
+    box-shadow: none;
+    outline: none;
+    border: 1px solid var(--highlight-color);
+}
+
+#date-of-birth{
+    color: var(--text-color);
+}
+
+#calculate-button{
+    font-family: sans-serif;
+    font-size: 18px;
+    color: #fff;
+    background-color: var(--highlight-color);
+    border: none;
+    border-radius: 20px;
+    width: 120px;
+    height: 42px;
+    margin: 0;
+}
+
+
+#calculate-button:hover{
+    color: var(--highlight-color);
+    background-color: #fff;
+    border: 2px solid var(--highlight-color);
+}
+
+#result{
+    display: none;
+}
+
+/* Birthday */
+.birthday{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+}
+
+.age{
+    margin-left: 10%;
+    width:35%;
+}
+
+.age-header{
+    font-weight: 400;
+    font-size: 38px;
+    margin-top: 10px;
+}
+
+.age-yrs{
+    margin-bottom: 30px;
+}
+
+#age-years{
+    font-size: 52px;
+    font-weight: 400;
+    color: var(--highlight-color);
+}
+
+.med-text{
+    font-size: 20px;
+}
+
+.small-text{
+    font-size: 14px;
+}
+
+.next-birthday{
+    margin-right: 10%;
+    text-align: center;
+    width:35%;
+}
+
+.next-birthday-header{
+    font-weight: 400;
+    color: var(--highlight-color)
+}
+
+/* Summary */
+.summary-header{
+    font-size: 24px;
+    font-weight: 400;
+    color: var(--highlight-color);
+    text-align: center;
+}
+
+.summary{
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    justify-items: center;
+    align-items: center;
+}
+
+.total-numbers{
+    margin-top: 0;
+    font-size: 20px;
+
+}
+
+.summary-item{
+    text-align: center;
+    margin-bottom: 0;
+}
+
+.summary-item .small-text{
+ margin-bottom: 4px;
+ margin-top: 4px;
+}
