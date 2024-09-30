@@ -62,9 +62,11 @@ const CalculateAge = () => {
     }
     updateValue('age-month', ageMonths);
 
-    dateBirth.setFullYear(year);
+    let tempDate = new Date(dateBirth);
+    tempDate.setFullYear(year);
+    tempDate.setMonth(ageMonths + monthBirth - 1);
 
-    let ageDays = Math.floor((date.getTime() - dateBirth.getTime()) / (1000 * 60 * 60 * 24));
+    let ageDays = Math.floor((date.getTime() - tempDate.getTime()) / (1000 * 60 * 60 * 24));
     if (isBirthdayThisYear) {
         ageDays = 365 + ageDays;
     }
@@ -80,13 +82,15 @@ const CalculateAge = () => {
     }
     updateValue('next-month', nextMonth);
 
-    const nextDays = Math.ceil((nextBirthday.getTime() - date.getTime()) / (1000 * 60 * 60 * 24));
+    tempDate = new Date (nextBirthday);
+    tempDate.setMonth(monthBirth - 2);
+    tempDate.setDate(day);
+    console.log(nextBirthday, tempDate);
+    const nextDays = Math.floor((nextBirthday.getTime() - tempDate.getTime()) / (1000 * 60 * 60 * 24));
     updateValue('next-days', nextDays);
 
     const totalMonths = ageMonths + ageYears * 12;
     updateValue('total-month', totalMonths);
-
-    dateBirth.setFullYear(yearBirth);
 
     const totalDays = Math.floor((date.getTime() - dateBirth.getTime()) / (1000 * 60 * 60 * 24));
     updateValue('total-days', totalDays);
